@@ -12,6 +12,35 @@ package javatp3;
  */
 public class ejercicio03 {
     public static void main(String[] args) {
+        int espacio;
+        int multiplo;
+        espacio = ejercicio02.mensajeLectura("ingrese la cantidad de multiplos a entregar:");//se usa el metodo de lectura creado en el anterior ejercicio
+        if(espacio > 0){
+            multiplo = ejercicio02.mensajeLectura("ingrese el numero:");
+            int[] multiplos = new int[espacio];
+            multiplosEnArray(multiplos, multiplo);
+            mostrarArray(multiplos);
+        }
         
     }
+    /**
+     * añade multiplos del numero entregado al array
+     * @param arreglo al cual se le añadiran
+     * @param numero numero del cual se obtendran sus multiplos
+     */
+    public static void multiplosEnArray(int[] arreglo,int numero) {
+        for(int i = 0; i < arreglo.length; i++){
+            arreglo[i] = (i+1) * numero;//se multiplica el numero por el espacio mas 1;
+        }
+    }
+    /**
+     * muestra los multiplos almacenados
+     * @param arreglo arreglo a mostrar
+     */
+    public static void mostrarArray(int[] arreglo){
+        for(int lugar = 0; lugar < arreglo.length; lugar++){
+            System.out.println(""+arreglo[0]+" * "+(lugar + 1)+" = "+arreglo[lugar]);
+        }
+    }
+
 }
