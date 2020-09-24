@@ -36,6 +36,22 @@ public class ejercicio04 {
         return mayor;//retorna el mayor numero encontrado
     }
     /**
+     * dado dos numero retorna la diferencia de estos
+     * @param numA,numB numeros a entregar para saber su diferencia
+     * @return diferencia
+     */
+    public static float diferencia(float numA, float numB) {
+        double dif;
+        if(numA > numB){//dependidendo del cual es mayor
+            dif = numA-numB;
+        }else{
+            dif = numB-numA;
+        }
+        //una diferencia no pude ser negativa asi que elevamos el numero a la 2 para luego sacar raiz de este y asi obtener el valor absoluto
+        return (float)Math.sqrt(dif*dif);
+    }
+
+    /**
      * retorna el menor numero de un array
      * @param decimales array de decimales
      * @return el menor numero encontrado
