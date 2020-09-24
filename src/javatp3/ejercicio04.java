@@ -16,10 +16,18 @@ import java.util.Scanner;
  */
 public class ejercicio04 {
     public static void main(String[] args) {
+        float numeroMayor, numeroMenor;
         float [] decimales = new float[20];
         System.out.println("ingrese los numeros decimales");
-        ingresoDeNumeros(decimales);
-
+        ingresoDeNumeros(decimales);//se ingresan los numeros
+        //una ves ya almacenados los numeros procedemos a trabajar con ellos obteniendo el mayor y el menor del array
+        numeroMayor = mayorDelArreglo(decimales);
+        numeroMenor = menorDelArreglo(decimales);
+        System.out.println( "\n"+
+                            "mayor:"        + numeroMayor + "\n" + //se muestra el mayor
+                            "menor:"        + numeroMenor + "\n" + //se muestra el menor
+                            "diferencia:"   + diferencia(numeroMayor, numeroMenor) //la diferencia
+                        );
     }
     /**
      * retorna el mayor numero de un array
