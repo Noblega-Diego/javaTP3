@@ -42,11 +42,7 @@ public class ejercicio04 {
      */
     public static float diferencia(float numA, float numB) {
         double dif;
-        if(numA > numB){//dependidendo del cual es mayor
-            dif = numA-numB;
-        }else{
-            dif = numB-numA;
-        }
+        dif = (numA > numB)? numA-numB:numB-numA;//dependiendo del valor de verdad hara una o la otra operacion
         //una diferencia no pude ser negativa asi que elevamos el numero a la 2 para luego sacar raiz de este y asi obtener el valor absoluto
         return (float)Math.sqrt(dif*dif);
     }
