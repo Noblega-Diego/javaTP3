@@ -22,6 +22,34 @@ public class ejercicio04 {
 
     }
     /**
+     * retorna el mayor numero de un array
+     * @param decimales array de decimales
+     * @return el mayor numero encontrado
+     */
+    public static float mayorDelArreglo(float[] decimales) {
+        float mayor = decimales[0];
+        for(int i = 0; i< decimales.length; i++ ){//iteramos el array
+            if(mayor < decimales[i]){//si el numero almacenado como mayor es menor al siguiente se almacena este
+                mayor = decimales[i];//se almacena el numero siguiente si resulta ser mayor
+            }
+        }
+        return mayor;//retorna el mayor numero encontrado
+    }
+    /**
+     * retorna el menor numero de un array
+     * @param decimales array de decimales
+     * @return el menor numero encontrado
+     */
+    public static float menorDelArreglo(float[] decimales) {
+        float menor = decimales[0];
+        for(int i = 0; i < decimales.length; i++){
+            if(decimales[i] < menor){// si el numero actual es menor al numero anterior
+                menor = decimales[i];//se almacena el numero actual 
+            }
+        }
+        return menor;
+    }
+    /**
      * rellena un array, pidiendole al usuario los numeros.
      * @param arreglo arreglo a rellenar
      */
