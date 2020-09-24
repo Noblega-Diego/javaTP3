@@ -7,6 +7,7 @@
  * d) cuántos de los números son menores que el promedio aritmético 
  */
 package javatp3;
+import java.util.Random;
 /**
  *
  * @author diego
@@ -14,5 +15,12 @@ package javatp3;
 public class Ejercicio05 {
     public static void main(String[] args) {
         
+    }
+
+    public static void aleatoriosEnArray(int[] arreglo) {
+        Random random = new Random();
+        for(int i = 0; i < arreglo.length; i++){
+            arreglo[i] = random.nextInt(100);//se almacena un numero random
+        }
     }
 }
