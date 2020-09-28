@@ -14,7 +14,34 @@ import java.util.Random;
  */
 public class Ejercicio05 {
     public static void main(String[] args) {
-        
+        int [] arrayNumAleatorios = new int[20];
+        int promedio,iguales,mayores,menores;
+        aleatoriosEnArray(arrayNumAleatorios);
+        promedio = promedioAritmetico(arrayNumAleatorios);
+        iguales = cantNumIgualesA(promedio, arrayNumAleatorios);
+        mayores = cantMayorA(promedio, arrayNumAleatorios);
+        menores = cantMenoresA(promedio, arrayNumAleatorios);
+        System.out.println( "array:"    + arrayIntToString(arrayNumAleatorios, 0));
+        System.out.println( "promedio:" + promedio  + "\n" +
+                            "iguales:"  + iguales   + "\n" +
+                            "mayores:"  + mayores   + "\n" +
+                            "menores:"  + menores
+                            );
+    }
+    /**
+     * retorna un String del array ordenado en una sola linea
+     * @param arreglo   array
+     * @param inicio    inicio del array
+     * @return          String
+     */
+    public static String arrayIntToString(int[] arreglo,int inicio) {
+        String string = "";                                                 //iniciamos el String con ""
+        string += arreglo[inicio];                                          //le anidamos al string el valor del espacio indicado con inicio
+        if(inicio != arreglo.length - 1){                                   //si el inicio es diferente al ultimo espacio del array
+            return string + ", " + arrayIntToString(arreglo, inicio +1);    //se le anida un separador mas el string del siguiente espacio
+        }else{
+            return string;                                                  //si es el ultimo espacio retorna el string de este solamente
+        }
     }
     /**
      * Rellena el array con numeros enteros
