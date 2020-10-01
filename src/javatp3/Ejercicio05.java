@@ -50,7 +50,11 @@ public class Ejercicio05 {
     public static void aleatoriosEnArray(int[] arreglo) {
         Random random = new Random();                           //instanciamos a la clase Random
         for(int i = 0; i < arreglo.length; i++){
-            arreglo[i] = random.nextInt(100);                   //se almacena un numero random
+            int numRandom;
+            do{
+                numRandom = random.nextInt(100);                //se almacena un numero random
+            }while(numRandom % 2 != 0 || numRandom < 2);   
+            arreglo[i] = numRandom;
         }
     }
     /**
