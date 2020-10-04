@@ -46,7 +46,7 @@ public class ejercicio06 {
      * @param num
      * @param arreglo
      * @return el espacio en cual se encontro
-     * @return -1: en caso de no haber encontrado ninguno
+     * -1: en caso de no haber encontrado ninguno
      */
     public static int busquedaEnArray(int num,int[] arreglo) {
         for(int i = 0; i < arreglo.length; i++){
