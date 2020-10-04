@@ -48,7 +48,7 @@ public class ejercicio10 {
      * 
      * @param array1 se multiplica los objetos de este por
      * @param array2 los de este
-     * @param array3    al cal se le llenaran con la suma de las multiplicaciones
+     * @param array3    al cual se le llenaran con la suma de las multiplicaciones
      */
     public static void sumaDeMultiplicaciones(int[] array1, int[] array2, int[] array3){
         for(int i = 0;i < array1.length;i++){
