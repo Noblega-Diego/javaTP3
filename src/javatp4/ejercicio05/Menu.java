@@ -70,6 +70,8 @@ public class Menu {
         boolean estado = funcionesPrincipales.retirarProducto(posicion);
         if(!estado){
             System.out.println("no se pudo completar la operacion");
+        }else{
+            System.out.println("GRACIAS por su compra");
         }
     }
     
