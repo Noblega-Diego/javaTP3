@@ -26,10 +26,10 @@ public class MatrizDeGolocinas {
         int cantidad;                                                           //varible para cantidad de golocinas
         int precio;
         cantidad = Integer.parseInt(this.matrizGolocinas[posicion][2]);         //casteamos cantidad de golocinas
-        precio = Integer.parseInt(this.matrizGolocinas[posicion][2]);
-        if(posicion > 0){                                                       //si hay golocinas
+        precio = Integer.parseInt(this.matrizGolocinas[posicion][1]);
+        if(posicion >= 0 && posicion < cantidad){                                                       //si hay golocinas
             cantidad --;                                                            //se resta
-            this.matrizGolocinas[posicion][1] = String.valueOf(cantidad);           //se guarda la cantidad
+            this.matrizGolocinas[posicion][2] = String.valueOf(cantidad);           //se guarda la cantidad
             return precio;                                                          //retornamos el precio
         }else{                                                                   //si no 
             return -1;                                                           //retornamos -1 indicando que no hay productos
