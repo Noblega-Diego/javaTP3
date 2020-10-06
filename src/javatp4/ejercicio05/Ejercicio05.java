@@ -13,7 +13,7 @@ package javatp4.ejercicio05;
 public class Ejercicio05 {
     
     public static void main(String[] args) {
-        String password = "AdminXYZ”";                                                              //contraseña para acceder a ciertas funcionalidades
+        String password = "AdminXYZ";                                                              //contraseña para acceder a ciertas funcionalidades
         MatrizDeGolocinas golocinas = new MatrizDeGolocinas();                                      //Matriz que contiene las golocinas
         FuncionesPrincipales funcionesPrincipales = new FuncionesPrincipales(golocinas, password);  //Las funciones basicas del prorama tales como suma comprovacion de contraseña etc
         Menu menuOpciones = new Menu(funcionesPrincipales);                                         //el objeto menu es el ecargado de la interfaz
